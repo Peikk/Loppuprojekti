@@ -59,19 +59,9 @@ Ohjelma on toteutettu seuraavilla teknologioilla:
 Tallennus on toteutettu SQLite-tietokannalla.  
 Tietojen käsittelyssä käytetään repository-rakennetta, jotta tietokantakyselyt pysyvät erillään käyttöliittymästä.
 
-## 8. Toteutetut parannukset
-Projektia on kehitetty palautteen perusteella seuraavasti:
-- JSON-tiedostojen sijaan käyttöön otettiin SQLite
-- tuotteille voidaan lisätä osia
-- työmääräyksen osat tulevat automaattisesti valitun tuotteen perusteella
-- CustomerId ja ProductId tulevat käyttöliittymän valinnoista
-- työ voidaan merkitä valmiiksi
-- valmiit työt voidaan näyttää uudelleen
-- back-navigointi lisättiin lomakkeisiin
-
 ## 9. Rajaukset
 Projektissa keskityttiin tärkeimpiin toiminnallisuuksiin.  
-Mahdollisia jatkokehityskohteita ovat esimerkiksi käyttäjähallinta, tarkempi varaston seuranta, raportointi sekä mahdollinen siirtyminen myöhemmin Azure-ympäristöön.
+Mahdollisia jatkokehityskohteita ovat siirtyminen myöhemmin Azure-ympäristöön.
 
 ## 10. Yhteenveto
 WorkOrder System on työmääräysten hallintaan suunniteltu sovellus, jonka tavoitteena on tehdä tuotteiden, osien ja työtilausten käsittelystä selkeämpää ja tehokkaampaa.  
