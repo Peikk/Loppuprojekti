@@ -1,0 +1,78 @@
+# OHJELMAN SUUNNITELMA - WorkOrder System
+
+## 1. Yleiskuva
+WorkOrder System on C# WinForms -sovellus työtilausten hallintaan.  
+Ohjelman tarkoitus on helpottaa tuotteiden, tuotteisiin kuuluvien osien sekä työmääräysten käsittelyä yhden käyttöliittymän kautta.
+
+## 2. Tavoite
+Projektin tavoitteena on toteuttaa selkeä ja toimiva työtilausjärjestelmä, jossa käyttäjä voi:
+- luoda uusia tuotteita
+- lisätä tuotteille osia
+- luoda työmääräyksiä valituille tuotteille
+- hakea tuotteeseen kuuluvat osat automaattisesti työmääräykselle
+- merkitä työ valmiiksi
+- tarkastella aktiivisia ja valmiita töitä
+
+## 3. Käyttäjät
+Ohjelma on suunniteltu konepajan työntekijöille tai työnjohdolle, jotka käsittelevät tuotteita, osia ja työtilauksia päivittäin.
+
+## 4. Päätoiminnot
+Ohjelman tärkeimmät toiminnot ovat:
+- MainMenu, josta voidaan siirtyä eri näkymiin
+- tuotteiden hallinta
+- tuotteisiin kuuluvien osien hallinta
+- työmääräysten luonti
+- työmääräysten avaaminen ja tarkastelu
+- työn merkitseminen valmiiksi
+- valmiiden töiden näyttäminen listassa
+
+## 5. Käyttöliittymärakenne
+Ohjelman käyttöliittymä koostuu useista WinForms-lomakkeista:
+- `MainMenuForm`
+- `WorkOrderListForm`
+- `LisaaTyoForm`
+- `WorkOrderDetailsForm`
+- `ManageProductsForm`
+
+Navigointi tapahtuu painikkeilla, ja jokaisesta keskeisestä näkymästä voidaan palata takaisin päävalikkoon.
+
+## 6. Tietomalli
+Tietomalli on suunniteltu Draw.io:lla.  
+Tärkeimmät kokonaisuudet ovat:
+- asiakkaat
+- tuotteet
+- osat
+- tuoteosat
+- työkortit / työmääräykset
+- työkorttirivit
+- statukset
+
+Tietokannan tarkoitus on varmistaa tietojen eheys ja se, että tuotteisiin liittyvät osat sekä työmääräykset voidaan hakea ja tallentaa rakenteisesti.
+
+## 7. Tekninen toteutus
+Ohjelma on toteutettu seuraavilla teknologioilla:
+- C#
+- Windows Forms
+- SQLite
+- Visual Studio
+
+Tallennus on toteutettu SQLite-tietokannalla.  
+Tietojen käsittelyssä käytetään repository-rakennetta, jotta tietokantakyselyt pysyvät erillään käyttöliittymästä.
+
+## 8. Toteutetut parannukset
+Projektia on kehitetty palautteen perusteella seuraavasti:
+- JSON-tiedostojen sijaan käyttöön otettiin SQLite
+- tuotteille voidaan lisätä osia
+- työmääräyksen osat tulevat automaattisesti valitun tuotteen perusteella
+- CustomerId ja ProductId tulevat käyttöliittymän valinnoista
+- työ voidaan merkitä valmiiksi
+- valmiit työt voidaan näyttää uudelleen
+- back-navigointi lisättiin lomakkeisiin
+
+## 9. Rajaukset
+Projektissa keskityttiin tärkeimpiin toiminnallisuuksiin.  
+Mahdollisia jatkokehityskohteita ovat esimerkiksi käyttäjähallinta, tarkempi varaston seuranta, raportointi sekä mahdollinen siirtyminen myöhemmin Azure-ympäristöön.
+
+## 10. Yhteenveto
+WorkOrder System on työmääräysten hallintaan suunniteltu sovellus, jonka tavoitteena on tehdä tuotteiden, osien ja työtilausten käsittelystä selkeämpää ja tehokkaampaa.  
+Toteutus perustuu tietomalliin, WinForms-käyttöliittymään ja SQLite-tietokantaan.
